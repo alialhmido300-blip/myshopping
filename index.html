@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فتح تطبيق قائمة التسوق</title>
+</head>
+<body>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const data = params.get('data');
+        
+        if (data) {
+            window.location.href = "alilist://import?data=" + data;
+        }
+        
+        setTimeout(function() {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.my.newproject";
+        }, 2500);
+    </script>
+    <p style="text-align:center; font-family:sans-serif; margin-top:50px;">جاري فتح التطبيق...</p>
+</body>
+</html>
